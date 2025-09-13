@@ -76,9 +76,8 @@ export const BentoGridItem = ({
         </div>
 
         <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
-          }`}
+          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+            }`}
         >
           {spareImg && (
             <img
@@ -112,30 +111,34 @@ export const BentoGridItem = ({
           {id === 2 && <GridGlobe />}
 
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-8">
-                {["MongoDB", "Next.js", "TypeScript"].map((item) => (
+            <div className="flex gap-1 lg:gap-3 w-fit absolute -right-3 lg:-right-2">
+              {/* First Column */}
+              <div className="flex flex-col gap-2 lg:gap-4">
+                {["Astro", "Next.js", "TypeScript"].map((item, index) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className={`py-2 lg:py-3 lg:px-3 px-3 text-xs lg:text-sm opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] ${index % 2 === 0 ? "mt-0" : "mt-2 lg:mt-3" // smaller stagger
+                      }`}
                   >
                     {item}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
-              <div className="flex flex-col gap-3 lg:gap-8">
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {["Express.js", "React.js", "Node.js"].map((item) => (
+
+              {/* Second Column */}
+              <div className="flex flex-col gap-2 lg:gap-4">
+                {["AWS", "React.js", "Docker"].map((item, index) => (
                   <span
                     key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className={`py-2 lg:py-3 lg:px-3 px-3 text-xs lg:text-sm opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E] ${index % 2 === 0 ? "mt-2 lg:mt-3" : "mt-0" // smaller stagger opposite
+                      }`}
                   >
                     {item}
                   </span>
                 ))}
               </div>
             </div>
+
           )}
 
           {id === 6 && (

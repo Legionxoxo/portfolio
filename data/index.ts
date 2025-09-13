@@ -51,8 +51,8 @@ export const gridItems = [
 
     {
         id: 5,
-        title: "Developing an AI-driven football project to detect and analyze match parameters.",
-        description: "Football StatSphere",
+        title: "Building an AI-powered app that helps parents 10x their child’s learning through fun, interactive sessions",
+        description: "Buzzzi",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
         titleClassName: "justify-center md:justify-start lg:justify-center",

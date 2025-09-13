@@ -72,6 +72,22 @@ const Hero = () => {
                 />
               </a>
             </div>
+            <div className="ml-5">
+              <a href="/ShivendraSinghChandelResume.pdf" download>
+                <MagicButton
+                  title="Download my Resume"
+                  icon={
+                    <Image
+                      src={"/arrow.svg"}
+                      alt="linkedIn"
+                      width={14}
+                      height={14}
+                    />
+                  }
+                  position="right"
+                />
+              </a>
+            </div>
             <div className="ml-5"></div>
           </div>
         </div>
